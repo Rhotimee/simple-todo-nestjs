@@ -58,6 +58,15 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+## URL: https://simple-todo-nest.herokuapp.com/todos
+
+## Routes
+
+- Fetch all todos:`GET /`
+- Fetch One todo: `GET /:id`
+- Create todo: `POST /`
+- Update todo: `PUT /:id`
+- Delete toodo: `DELETE /:id`
 
 ## Support
 
