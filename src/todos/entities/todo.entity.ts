@@ -13,7 +13,7 @@ export class Todo extends Document {
   completed: boolean;
 
   @Prop()
-  deadline: string;
+  deadline: Date;
 
   @Prop({ index: true })
   username: string;

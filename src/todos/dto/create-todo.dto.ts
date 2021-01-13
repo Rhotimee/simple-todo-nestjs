@@ -1,4 +1,4 @@
-import { IsString, IsBoolean } from 'class-validator';
+import { IsString, IsBoolean, IsDate } from 'class-validator';
 
 export class CreateTodoDto {
   @IsString()
@@ -10,8 +10,8 @@ export class CreateTodoDto {
   @IsBoolean()
   readonly completed: boolean;
 
-  @IsString()
-  readonly deadline: string;
+  @IsDate()
+  readonly deadline: Date;
 
   @IsString()
   readonly username: string;
