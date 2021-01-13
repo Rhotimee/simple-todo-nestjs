@@ -17,6 +17,11 @@ export class TodosController {
     return this.todosService.findAll();
   }
 
+  @Get('private/:username')
+  findByUsername(@Param('username') username: string) {
+    return this.todosService.findAllByUsername(username)
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.todosService.findOne(id);

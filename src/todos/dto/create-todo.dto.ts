@@ -12,4 +12,7 @@ export class CreateTodoDto {
 
   @IsString()
   readonly deadline: string;
+
+  @IsString()
+  readonly username: string;
 }

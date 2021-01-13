@@ -14,6 +14,9 @@ export class Todo extends Document {
 
   @Prop()
   deadline: string;
+
+  @Prop({ index: true })
+  username: string;
 }
 
 export const TodoSchema = SchemaFactory.createForClass(Todo);

@@ -9,7 +9,7 @@ import { TodosModule } from './todos/todos.module';
   imports: [
     TodosModule, 
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.MONGO_URI)
+    MongooseModule.forRoot(process.env.MONGO_URI, { useCreateIndex: true })
   ],
   controllers: [AppController],
   providers: [AppService],

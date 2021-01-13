@@ -17,9 +17,9 @@ export class TodosService {
   }
 
   findAll() {
-    return this.todoModel.find().exec();
+    return this.todoModel.find({ username: { $exists: false } }).exec();
   }
-
+  
   async findOne(id: string) {
     const todo = await this.todoModel.findOne({ _id: id}).exec()
     if (!todo) {
@@ -46,5 +46,9 @@ export class TodosService {
   async remove(id: string) {
     const todo = await this.findOne(id);
     return todo.remove();
+  }
+
+  async findAllByUsername(username: string) {
+    return this.todoModel.find({ username }).exec();
   }
 }
