@@ -17,7 +17,10 @@ export class TodosService {
   }
 
   findAll() {
-    return this.todoModel.find({ username: { $exists: false } }).exec();
+    return this.todoModel
+      .find({ username: { $exists: false } })
+      .sort({ date: -1} )
+      .exec();
   }
   
   async findOne(id: string) {
